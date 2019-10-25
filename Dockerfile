@@ -164,11 +164,8 @@ ENV DEBUG=true
 #CLEAN
 RUN apt-get clean
 
-#START ENTRYPOINT
-ENTRYPOINT /usr/bin/supervisord
-
 #EXPOSE PORTS
 EXPOSE $VNC_PORT $NO_VNC_PORT
 
-#WAIT CMD
-CMD ["--wait"]
+#CMD
+CMD /usr/bin/supervisord
