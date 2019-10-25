@@ -143,6 +143,7 @@ RUN wget -qO- https://dl.bintray.com/tigervnc/stable/tigervnc-1.9.0.x86_64.tar.g
 ADD ./src/xfce/ /root/
 ADD ./src/install/ /root/install/
 ADD ./src/scripts/ /root/scripts/
+ADD ./src/supervisor/ /etc/supervisor
 
 #PERMISSION
 RUN chmod a+x /root/scripts/permission.sh && /root/scripts/permission.sh  /root /root/install /root/scripts
@@ -164,7 +165,7 @@ ENV DEBUG=true
 RUN apt-get clean
 
 #START ENTRYPOINT
-ENTRYPOINT /root/scripts/entrypoint.sh
+ENTRYPOINT /usr/bin/supervisord
 
 #EXPOSE PORTS
 EXPOSE $VNC_PORT $NO_VNC_PORT
