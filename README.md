@@ -32,7 +32,7 @@ If the container is started like mentioned above, connect via one of these optio
 
 * connect via __VNC viewer `localhost:5901`__, default password: `vncpassword`
 * connect via __noVNC HTML5 full client__: [`http://localhost:6901/vnc.html`](http://localhost:6901/vnc.html), default password: `b045e0c5e8f9a2c87ac19512f6e0f7e5` 
-* connect via __noVNC HTML5 lite client__: [`http://localhost:6901/?password=vncpassword`](http://localhost:6901/?password=vncpassword) 
+* connect via __noVNC HTML5 lite client__: [`http://localhost:6901/?password=b045e0c5e8f9a2c87ac19512f6e0f7e5`](http://localhost:6901/?password=b045e0c5e8f9a2c87ac19512f6e0f7e5) 
 
 
 ## Hints
